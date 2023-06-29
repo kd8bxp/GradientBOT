@@ -24,8 +24,8 @@ void loop() {
  
  sensor = analogRead(A2);
  if (sensor <= 39 || sensor >= 275) { Motors.Motordrive(Speed_Dir, 0, 0); digitalWrite(LED1, LOW); digitalWrite(LED2, LOW); while(1); } //stop
- if (sensor >= 159 || sensor <= 161) { Motors.Motordrive(Speed_Dir, -65, 65); digitalWrite(LED1, HIGH); digitalWrite(LED2, HIGH); } //move forward on target 158, 164
- if (sensor > 162 ) { Motors.Motordrive(Speed_Dir, 0, 65); digitalWrite(LED1, HIGH); digitalWrite(LED2, LOW); } //correct to the left
- if (sensor < 158 ) { Motors.Motordrive(Speed_Dir, -65, 0); digitalWrite(LED1, LOW); digitalWrite(LED2, HIGH); } //correct to the right
+ if (sensor >= 175 || sensor <= 176) { Motors.Motordrive(Speed_Dir, -65, 65); } //digitalWrite(LED1, HIGH); digitalWrite(LED2, HIGH); } //move forward on target 158, 164
+ if (sensor > 177 ) { Motors.Motordrive(Speed_Dir, 0, 52); } //digitalWrite(LED1, HIGH); digitalWrite(LED2, LOW); } //correct to the left
+ if (sensor < 174 ) { Motors.Motordrive(Speed_Dir, -52, 0); } //digitalWrite(LED1, LOW); digitalWrite(LED2, HIGH); } //correct to the right
  
 }
